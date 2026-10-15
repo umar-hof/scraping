@@ -1,0 +1,26 @@
+{
+  "name": "hof-pack-lead-intelligence-backend-contract",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Offline backend foundation and PostgreSQL schema for the HOF Pack lead intelligence platform",
+  "type": "commonjs",
+  "scripts": {
+    "test": "node test/run-tests.js",
+    "test:postgres": "node test/postgres-integration.js",
+    "test:supabase": "node test/supabase-cloud.integration.js",
+    "preview:sheets": "node scripts/preview-sheets.js",
+    "supabase:health": "node scripts/supabase.js health",
+    "supabase:status": "node scripts/supabase.js status",
+    "supabase:bundle": "node scripts/supabase.js bundle-hash",
+    "supabase:migrate": "node scripts/supabase.js migrate",
+    "normalize:snapshots": "node scripts/normalize-snapshots.js",
+    "worker": "node worker.js",
+    "worker:role-smoke": "node scripts/setup-worker-role.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "pg": "^8.23.1"
+  }
+}

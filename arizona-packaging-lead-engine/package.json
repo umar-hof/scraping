@@ -1,0 +1,16 @@
+{
+  "name": "arizona-packaging-lead-engine",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Dependency-free Google Apps Script lead research engine for Arizona packaging prospects",
+  "scripts": {
+    "test": "node tests/run-tests.js",
+    "pilot:preview": "node scripts/preview-pilot.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "@google/clasp": "^3.4.1"
+  }
+}

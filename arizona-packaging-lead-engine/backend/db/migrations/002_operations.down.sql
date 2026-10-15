@@ -1,0 +1,14 @@
+BEGIN;
+DROP FUNCTION lead_intel.ack_sheet_sync_outbox(uuid, text, integer, char);
+DROP FUNCTION lead_intel.fail_sheet_sync_outbox(uuid, text, text, boolean, timestamptz);
+DROP FUNCTION lead_intel.claim_sheet_sync_outbox(text, integer, integer);
+DROP FUNCTION lead_intel.finish_job(uuid, text, boolean, jsonb, text, text, boolean, timestamptz);
+DROP FUNCTION lead_intel.claim_jobs(text, integer, integer);
+DROP TABLE lead_intel.suppression;
+DROP TABLE lead_intel.sheet_sync_outbox;
+DROP TABLE lead_intel.sheet_sync_row_state;
+DROP TABLE lead_intel.sheet_sync_state;
+DROP TABLE lead_intel.job_runs;
+DROP TABLE lead_intel.jobs;
+DROP TABLE lead_intel.discovery_coverage;
+COMMIT;

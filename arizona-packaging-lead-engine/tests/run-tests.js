@@ -1,0 +1,1 @@
+['discovery.test.js','validation.test.js','deduplication.test.js','scoring.test.js','storage.test.js','recovery.test.js','setup.test.js','pilot.test.js','contact-enrichment.test.js','verification-engine.test.js','data-quality-workflow.test.js'].forEach(f=>require('./'+f));

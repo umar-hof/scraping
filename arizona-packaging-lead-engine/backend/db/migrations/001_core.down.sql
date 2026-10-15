@@ -1,0 +1,13 @@
+BEGIN;
+DROP TABLE lead_intel.verification_events;
+DROP TABLE lead_intel.contact_points;
+DROP TABLE lead_intel.source_evidence;
+DROP TABLE lead_intel.contacts;
+DROP TABLE lead_intel.company_identifiers;
+DROP TABLE lead_intel.sources;
+DROP TABLE lead_intel.company_locations;
+DROP TABLE lead_intel.companies;
+DROP FUNCTION lead_intel.reject_audit_mutation();
+DROP FUNCTION lead_intel.touch_updated_at();
+DROP SCHEMA lead_intel;
+COMMIT;

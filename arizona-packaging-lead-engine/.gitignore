@@ -1,0 +1,8 @@
+node_modules/
+coverage/
+.clasp.json
+.env
+*.log
+pilot-data/
+backend/certs/
+

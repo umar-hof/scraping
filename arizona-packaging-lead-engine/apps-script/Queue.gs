@@ -1,0 +1,4 @@
+function loadPendingCandidates_(limit){var sh=getSpreadsheet_().getSheetByName('Review Queue'), out=[]; if(!sh||sh.getLastRow()<2)return out; var rows=sh.getDataRange().getValues(); for(var i=1;i<rows.length&&out.length<(limit||25);i++) if(rows[i][4]==='PENDING'||rows[i][4]==='RETRY_WAIT'){try{var c=JSON.parse(rows[i][6]||'{}');c._queueRow=i+1;c._candidateId=rows[i][1];out.push(c);}catch(e){}} return out;}
+function markQueue_(row,status,note){var sh=getSpreadsheet_().getSheetByName('Review Queue'); sh.getRange(row,5).setValue(status); if(note)sh.getRange(row,7).setValue(note);}
+function addReview_(candidate,reason,evidence){getSpreadsheet_().getSheetByName('Review Queue').appendRow([Utilities.getUuid(),candidate._candidateId||stableId_(candidate.website||candidate.companyName),reason,evidence||candidate.sourceUrl||'', 'PENDING',now_(), '']);}
+
